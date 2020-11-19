@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Guestlist.Data
 {
-    public class MonogoDbProvider : IDataProvider<GuestEntity>
+    public class MongoDbProvider : IDataProvider<GuestEntity>
     {
         private readonly IMongoDatabase _db;
         private readonly string _collectionName;
@@ -18,7 +18,7 @@ namespace Guestlist.Data
         /// <param name="connectionString">By default for a local MongoDB instance connectionString = "mongodb://localhost:27017"</param>
         /// <param name="databaseName">The name of the database to use or create.</param>
         /// <param name="collectionName">The collection name = table name</param>
-        public MonogoDbProvider(string connectionString, string databaseName, string collectionName)
+        public MongoDbProvider(string connectionString, string databaseName, string collectionName)
         {
             _collectionName = collectionName;
 

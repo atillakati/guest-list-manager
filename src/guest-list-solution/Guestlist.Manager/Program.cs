@@ -17,8 +17,7 @@ namespace Guestlist.Manager
             string dbName = "GuestDatabase";
             string collectionName = "GuestCollection";
 
-            IDataProvider<GuestEntity> db = new MonogoDbProvider(connectionString, dbName, collectionName);            
-
+            IDataProvider<GuestEntity> db = new MongoDbProvider(connectionString, dbName, collectionName);            
             var guestList = db.LoadAllDocuments();
 
             //layout settings
