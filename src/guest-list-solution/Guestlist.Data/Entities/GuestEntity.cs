@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
 
-namespace Guestlist.Data.Models
+namespace Guestlist.Data.Entities
 {
-    public class GuestModel
+    public class GuestEntity
     {
+        [BsonId]
         public Guid Id { get; set; }
+
+        [BsonElement("Name")]
         public string FullName { get; set; }
         public string Email { get; set; }
         public string StreetAndNr { get; set; }

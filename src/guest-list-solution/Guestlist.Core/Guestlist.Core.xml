@@ -8,58 +8,46 @@
             <summary>
             Interface for data provider, access to database
             </summary>
-            <typeparam name="T"></typeparam>
+            <typeparam name="T">Document data type</typeparam>
         </member>
-        <member name="M:Guestlist.Core.IDataProvider`1.InsertDocument(System.String,`0)">
+        <member name="M:Guestlist.Core.IDataProvider`1.InsertDocument(`0)">
             <summary>
             Insert new document into collection
-            </summary>
-            <typeparam name="T">Document data type</typeparam>
-            <param name="collectionName">Collection name</param>
-            <param name="document">Document</param>
+            </summary>        
+            <param name="document">The document to create</param>
         </member>
-        <member name="M:Guestlist.Core.IDataProvider`1.LoadAllDocuments(System.String)">
+        <member name="M:Guestlist.Core.IDataProvider`1.LoadAllDocuments">
             <summary>
             Load all documents in collection
             </summary>
-            <typeparam name="T"></typeparam>
-            <param name="collectionName"></param>
             <returns></returns>
         </member>
-        <member name="M:Guestlist.Core.IDataProvider`1.LoadDocumentById(System.String,System.Guid)">
+        <member name="M:Guestlist.Core.IDataProvider`1.LoadDocumentById(System.Guid)">
             <summary>
             Load document by Id
             </summary>
-            <typeparam name="T"></typeparam>
-            <param name="collectionName"></param>
-            <param name="id"></param>
+            <param name="id">The document with the id to load</param>
             <returns></returns>
         </member>
-        <member name="M:Guestlist.Core.IDataProvider`1.UpdateDocument(System.String,System.Guid,`0)">
+        <member name="M:Guestlist.Core.IDataProvider`1.UpdateDocument(System.Guid,`0)">
             <summary>
             Update document
             </summary>
-            <typeparam name="T"></typeparam>
-            <param name="collectionName"></param>
-            <param name="id"></param>
+            <param name="id">The document with the id to update</param>
             <param name="document"></param>
         </member>
-        <member name="M:Guestlist.Core.IDataProvider`1.UpsertDocument(System.String,System.Guid,`0)">
+        <member name="M:Guestlist.Core.IDataProvider`1.UpsertDocument(System.Guid,`0)">
             <summary>
             Insert document into collection if it does not already exist, or update it if it does
             </summary>
-            <typeparam name="T"></typeparam>
-            <param name="collectionName"></param>
             <param name="id"></param>
             <param name="document"></param>
         </member>
-        <member name="M:Guestlist.Core.IDataProvider`1.DeleteDocument(System.String,System.Guid)">
+        <member name="M:Guestlist.Core.IDataProvider`1.DeleteDocument(System.Guid)">
             <summary>
             Delete document by Id
             </summary>
-            <typeparam name="T"></typeparam>
-            <param name="collectionName"></param>
-            <param name="id"></param>
+            <param name="id">The document with the id to delete</param>
         </member>
     </members>
 </doc>

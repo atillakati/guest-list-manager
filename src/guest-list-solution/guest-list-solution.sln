@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guestlist.Data", "Guestlist
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guestlist.Manager", "Guestlist.Manager\Guestlist.Manager.csproj", "{25F93A27-D0B4-4132-80E1-82653A319F0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guestlist.UI.Console.Library", "Guestlist.UI.Console.Library\Guestlist.UI.Console.Library.csproj", "{B12D9560-348D-4446-A503-AB60C105983F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{25F93A27-D0B4-4132-80E1-82653A319F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25F93A27-D0B4-4132-80E1-82653A319F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25F93A27-D0B4-4132-80E1-82653A319F0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B12D9560-348D-4446-A503-AB60C105983F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B12D9560-348D-4446-A503-AB60C105983F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B12D9560-348D-4446-A503-AB60C105983F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B12D9560-348D-4446-A503-AB60C105983F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

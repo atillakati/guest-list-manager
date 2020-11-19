@@ -7,6 +7,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Guestlist.Core\Guestlist.Core.csproj" />
+    <ProjectReference Include="..\Guestlist.Data\Guestlist.Data.csproj" />
+    <ProjectReference Include="..\Guestlist.UI.Console.Library\Guestlist.UI.Console.Library.csproj" />
   </ItemGroup>
 
 </Project>
