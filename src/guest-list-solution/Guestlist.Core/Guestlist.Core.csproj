@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>F:\mycode\Repros\guest-list-manager\src\guest-list-solution\Guestlist.Core\Guestlist.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
