@@ -1,4 +1,5 @@
-# Installing docker on Raspberr PI 4 with Ubuntu 20.04 LTS x64
+# Installing the whole system
+## Docker on Raspberry PI 4 with Ubuntu 20.04 LTS x64
 
 ## Installing OS
 Use Raspberry PI Imager v1.4 to download and install the right image on a SD card.
