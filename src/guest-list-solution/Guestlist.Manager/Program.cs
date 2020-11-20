@@ -25,13 +25,26 @@ namespace Guestlist.Manager
             {                
                 {"FullName", new ColumnLayoutConfig { Alias = "Name", Width = 20, Visible=true } },
                 {"Email", new ColumnLayoutConfig { Alias = "Email", Width = 27, Visible=true } },
-                {"StreetAndNr", new ColumnLayoutConfig { Alias = "Street & Nr", Width = 20, Visible=true } },
-                {"City", new ColumnLayoutConfig { Alias = "City", Width = 15, Visible=true } },
-                {"PostalCode", new ColumnLayoutConfig { Alias = "PostalCode", Width = 11, Visible=true } },
+                {"StreetAndNr", new ColumnLayoutConfig { Alias = "Strasse & HNr", Width = 20, Visible=true } },
+                {"City", new ColumnLayoutConfig { Alias = "Stadt", Width = 15, Visible=true } },
+                {"PostalCode", new ColumnLayoutConfig { Alias = "Plz", Width = 11, Visible=true } },
             };
 
             var grid = new Grid<GuestEntity>(layoutSettings);
             grid.DisplayGrid(guestList);
+
+            //dispaly same grid with auto settings parser
+            ColumnLayoutParser<GuestEntity> config = new ColumnLayoutParser<GuestEntity>();
+            var settings = config.ParseLayoutSettings(guestList);            
+
+            grid = new Grid<GuestEntity>(settings);
+            grid.DisplayGrid(guestList);
+
+            Console.WriteLine("\nErmittelte max. Längen für die Spalten:");
+            foreach (var propertyName in config.Properties)
+            {
+                Console.WriteLine($"{propertyName}: {config[propertyName]}");
+            }
         }
     }
 }

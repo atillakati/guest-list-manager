@@ -19,6 +19,13 @@
             Defines, wheather the column should be shown or not
             </summary>
         </member>
+        <member name="P:Guestlist.UI.Console.Library.ColumnLayoutParser`1.Item(System.String)">
+            <summary>
+            Returns the parsed max column length for the property with the name in propertyName
+            </summary>
+            <param name="propertyName">The property name the length looked for</param>
+            <returns></returns>
+        </member>
         <member name="T:Guestlist.UI.Console.Library.Grid`1">
             <summary>
             A GridView wrapper for easy handling
