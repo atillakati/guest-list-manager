@@ -24,11 +24,27 @@ grid.DisplayGrid(guestList);
 //get data
 var guestList = db.LoadAllDocuments();
 
-//create instance and parse for layout setting
-ColumnLayoutParser<GuestEntity> config = new ColumnLayoutParser<GuestEntity>();
+//create instance and parse for layout settings
+var config = new ColumnLayoutParser<GuestEntity>();
 var settings = config.ParseLayoutSettings(guestList);            
 
 //create grid & display
 grid = new Grid<GuestEntity>(settings);
 grid.DisplayGrid(guestList);
+```
+## Retrieve the layout data from ColumnLayoutParser class
+```csharp
+//get data
+var guestList = db.LoadAllDocuments();
+
+//create instance and parse for layout settings
+var config = new ColumnLayoutParser<GuestEntity>();
+var settings = config.ParseLayoutSettings(guestList);
+
+//access property and indexer of ColumnLayoutParser class
+Console.WriteLine("\nErmittelte max. Längen für die Spalten:");
+foreach (var propertyName in config.Properties)
+{
+    Console.WriteLine($"{propertyName}:{new string(' ', 12-propertyName.Length)} {config[propertyName]}");
+}
 ```
