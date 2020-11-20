@@ -43,7 +43,7 @@ namespace Guestlist.Manager
             Console.WriteLine("\nErmittelte max. Längen für die Spalten:");
             foreach (var propertyName in config.Properties)
             {
-                Console.WriteLine($"{propertyName}: {config[propertyName]}");
+                Console.WriteLine($"{propertyName}:{new string(' ', 12-propertyName.Length)} {config[propertyName]}");
             }
         }
     }

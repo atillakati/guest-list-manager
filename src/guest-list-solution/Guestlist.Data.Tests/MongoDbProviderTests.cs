@@ -24,12 +24,12 @@ namespace Guestlist.Data.Tests
             var dummyData = new GuestEntity()
             {
                 Id = Guid.NewGuid(),
-                FullName = "Susi Sale",
-                Email = "ssusi@hotmail.com",
-                City = "Röthis",
-                PostalCode = 6876,
-                StreetAndNr = "Findusstrasse 9",
-                HasConfirmed = false,
+                FullName = "Gandalf der Weise",
+                Email = "gandalf@mittelerde.net",
+                City = "Mittelerde",
+                PostalCode = 12345,
+                StreetAndNr = "Der Gute Weg 42",
+                HasConfirmed = true,
                 LastChangeAt = DateTime.UtcNow
             };
 

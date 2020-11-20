@@ -19,11 +19,23 @@
             Defines, wheather the column should be shown or not
             </summary>
         </member>
+        <member name="P:Guestlist.UI.Console.Library.ColumnLayoutParser`1.Properties">
+            <summary>
+            The list of available properties for type T
+            </summary>
+        </member>
         <member name="P:Guestlist.UI.Console.Library.ColumnLayoutParser`1.Item(System.String)">
             <summary>
             Returns the parsed max column length for the property with the name in propertyName
             </summary>
             <param name="propertyName">The property name the length looked for</param>
+            <returns></returns>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.ColumnLayoutParser`1.ParseLayoutSettings(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Parses the necessary column layout settings for provided data list of type T
+            </summary>
+            <param name="gridData">The data list to parse the settings for</param>
             <returns></returns>
         </member>
         <member name="T:Guestlist.UI.Console.Library.Grid`1">
