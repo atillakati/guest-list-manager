@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>F:\mycode\Repros\guest-list-manager\src\guest-list-solution\Guestlist.UI.Console.Library\Guestlist.UI.Console.Library.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="ConsoleGrid" Version="1.0.0" />
   </ItemGroup>

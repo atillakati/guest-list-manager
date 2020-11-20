@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Guestlist.UI.Console.Library</name>
+    </assembly>
+    <members>
+        <member name="P:Guestlist.UI.Console.Library.ColumnLayoutConfig.Alias">
+            <summary>
+            The alias name for the column to display
+            </summary>
+        </member>
+        <member name="P:Guestlist.UI.Console.Library.ColumnLayoutConfig.Width">
+            <summary>
+            The width of the column (count of chars)
+            </summary>
+        </member>
+        <member name="P:Guestlist.UI.Console.Library.ColumnLayoutConfig.Visible">
+            <summary>
+            Defines, wheather the column should be shown or not
+            </summary>
+        </member>
+        <member name="T:Guestlist.UI.Console.Library.Grid`1">
+            <summary>
+            A GridView wrapper for easy handling
+            </summary>
+            <typeparam name="T">Data type to display as a grid</typeparam>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.Grid`1.#ctor">
+            <summary>
+            Instantiates a Grid with default layout settings of GridView
+            </summary>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.Grid`1.#ctor(System.Collections.Generic.Dictionary{System.String,Guestlist.UI.Console.Library.ColumnLayoutConfig})">
+            <summary>
+            Instantiates a Grid
+            </summary>
+            <param name="columnLayout">Defines the grid column layout, default column layout is invisible</param>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.Grid`1.DisplayGrid(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Displays the data in the provided list in the console as a grid
+            </summary>
+            <param name="dataList">The list with data to display</param>
+        </member>
+    </members>
+</doc>

@@ -21,16 +21,13 @@ namespace Guestlist.Manager
             var guestList = db.LoadAllDocuments();
 
             //layout settings
-            var layoutSettings = new Dictionary<string, int>()
-            {
-                {"Id", 40 },
-                {"FullName", 20 },
-                {"Email", 27 },
-                {"StreetAndNr", 20 },
-                {"City", 15 },
-                {"PostalCode", 11 },
-                {"HasConfirmed", 13 },
-                {"LastChangeAt", 25 },
+            var layoutSettings = new Dictionary<string, ColumnLayoutConfig>()
+            {                
+                {"FullName", new ColumnLayoutConfig { Alias = "Name", Width = 20, Visible=true } },
+                {"Email", new ColumnLayoutConfig { Alias = "Email", Width = 27, Visible=true } },
+                {"StreetAndNr", new ColumnLayoutConfig { Alias = "Street & Nr", Width = 20, Visible=true } },
+                {"City", new ColumnLayoutConfig { Alias = "City", Width = 15, Visible=true } },
+                {"PostalCode", new ColumnLayoutConfig { Alias = "PostalCode", Width = 11, Visible=true } },
             };
 
             var grid = new Grid<GuestEntity>(layoutSettings);
