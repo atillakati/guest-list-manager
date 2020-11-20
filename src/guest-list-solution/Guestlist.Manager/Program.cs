@@ -34,7 +34,7 @@ namespace Guestlist.Manager
             grid.DisplayGrid(guestList);
 
             //dispaly same grid with auto settings parser
-            ColumnLayoutParser<GuestEntity> config = new ColumnLayoutParser<GuestEntity>();
+            var config = new ColumnLayoutParser<GuestEntity>();
             var settings = config.ParseLayoutSettings(guestList);            
 
             grid = new Grid<GuestEntity>(settings);
