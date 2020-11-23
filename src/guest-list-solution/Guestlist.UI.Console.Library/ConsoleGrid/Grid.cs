@@ -15,6 +15,7 @@ namespace Guestlist.UI.Console.Library.ConsoleGrid
         private Dictionary<string, ColumnLayoutConfig> _columnLayout;
         private ColumnLayoutConfig _defaultLayoutSetting;
 
+
         /// <summary>
         /// Instantiates a Grid with default layout settings of GridView
         /// </summary>
@@ -23,14 +24,7 @@ namespace Guestlist.UI.Console.Library.ConsoleGrid
             _defaultLayoutSetting = null;
 
             Init(null);
-        }
-
-        public Grid(ColumnLayoutConfig defaultLayoutSetting)
-        {
-            _defaultLayoutSetting = defaultLayoutSetting;
-
-            Init(null);
-        }
+        }        
 
         /// <summary>
         /// Instantiates a Grid
@@ -50,6 +44,16 @@ namespace Guestlist.UI.Console.Library.ConsoleGrid
 
             Init(columnLayout);
         }
+
+        /// <summary>
+        /// Spezifies a default column setting for missing columnlayoutconfigs
+        /// </summary>
+        public ColumnLayoutConfig DefaultLayoutSetting
+        {
+            get { return _defaultLayoutSetting; }
+            set { _defaultLayoutSetting = value; }
+        }
+
 
         /// <summary>
         /// Displays the data in the provided list in the console as a grid
@@ -136,6 +140,5 @@ namespace Guestlist.UI.Console.Library.ConsoleGrid
                 }
             }
         }
-
     }
 }

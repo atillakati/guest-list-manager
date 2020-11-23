@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Guestlist.UI.Console.Library.ConsoleMenu
 {
-    public class Menu
+    public class Menu : IMenu
     {
         private List<IMenuItem> _items;
 
@@ -44,7 +44,7 @@ namespace Guestlist.UI.Console.Library.ConsoleMenu
 
                 foreach (var item in _items)
                 {
-                    if(item.Code == input.KeyChar)
+                    if (item.Code == input.KeyChar)
                     {
                         return item;
                     }

@@ -47,7 +47,7 @@ namespace Guestlist.Manager
             Console.Title = "Guestlist Manager v1.0 - akSoft ©2020";
 
             //create menu items
-            Menu menu = new Menu();
+            IMenu menu = new Menu();
             menu.Add(new MenuItem("Gäste laden", 'l', LoadGuests));
             menu.Add(new MenuItem("Gäste erfassen", 'n', GetNewGuest));
             menu.Add(new EmptyItem());
@@ -80,12 +80,7 @@ namespace Guestlist.Manager
         {
             Console.Clear();
         }
-
-        private static void QuitProgamm()
-        {
-            Console.WriteLine("Program Ende.");
-        }
-
+       
         private static void GetNewGuest()
         {
             var guest = new GuestEntity();
