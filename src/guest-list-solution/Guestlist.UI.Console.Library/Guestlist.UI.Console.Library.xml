@@ -4,62 +4,170 @@
         <name>Guestlist.UI.Console.Library</name>
     </assembly>
     <members>
-        <member name="P:Guestlist.UI.Console.Library.ColumnLayoutConfig.Alias">
+        <member name="P:Guestlist.UI.Console.Library.ConsoleGrid.ColumnLayoutConfig.Alias">
             <summary>
             The alias name for the column to display
             </summary>
         </member>
-        <member name="P:Guestlist.UI.Console.Library.ColumnLayoutConfig.Width">
+        <member name="P:Guestlist.UI.Console.Library.ConsoleGrid.ColumnLayoutConfig.Width">
             <summary>
             The width of the column (count of chars)
             </summary>
         </member>
-        <member name="P:Guestlist.UI.Console.Library.ColumnLayoutConfig.Visible">
+        <member name="P:Guestlist.UI.Console.Library.ConsoleGrid.ColumnLayoutConfig.Visible">
             <summary>
             Defines, wheather the column should be shown or not
             </summary>
         </member>
-        <member name="P:Guestlist.UI.Console.Library.ColumnLayoutParser`1.Properties">
+        <member name="P:Guestlist.UI.Console.Library.ConsoleGrid.ColumnLayoutParser`1.Properties">
             <summary>
             The list of available properties for type T
             </summary>
         </member>
-        <member name="P:Guestlist.UI.Console.Library.ColumnLayoutParser`1.Item(System.String)">
+        <member name="P:Guestlist.UI.Console.Library.ConsoleGrid.ColumnLayoutParser`1.Item(System.String)">
             <summary>
             Returns the parsed max column length for the property with the name in propertyName
             </summary>
             <param name="propertyName">The property name the length looked for</param>
             <returns></returns>
         </member>
-        <member name="M:Guestlist.UI.Console.Library.ColumnLayoutParser`1.ParseLayoutSettings(System.Collections.Generic.IEnumerable{`0})">
+        <member name="M:Guestlist.UI.Console.Library.ConsoleGrid.ColumnLayoutParser`1.ParseLayoutSettings(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             Parses the necessary column layout settings for provided data list of type T
             </summary>
             <param name="gridData">The data list to parse the settings for</param>
             <returns></returns>
         </member>
-        <member name="T:Guestlist.UI.Console.Library.Grid`1">
+        <member name="T:Guestlist.UI.Console.Library.ConsoleGrid.Grid`1">
             <summary>
             A GridView wrapper for easy handling
             </summary>
             <typeparam name="T">Data type to display as a grid</typeparam>
         </member>
-        <member name="M:Guestlist.UI.Console.Library.Grid`1.#ctor">
+        <member name="M:Guestlist.UI.Console.Library.ConsoleGrid.Grid`1.#ctor">
             <summary>
             Instantiates a Grid with default layout settings of GridView
             </summary>
         </member>
-        <member name="M:Guestlist.UI.Console.Library.Grid`1.#ctor(System.Collections.Generic.Dictionary{System.String,Guestlist.UI.Console.Library.ColumnLayoutConfig})">
+        <member name="M:Guestlist.UI.Console.Library.ConsoleGrid.Grid`1.#ctor(System.Collections.Generic.Dictionary{System.String,Guestlist.UI.Console.Library.ConsoleGrid.ColumnLayoutConfig})">
             <summary>
             Instantiates a Grid
             </summary>
             <param name="columnLayout">Defines the grid column layout, default column layout is invisible</param>
         </member>
-        <member name="M:Guestlist.UI.Console.Library.Grid`1.DisplayGrid(System.Collections.Generic.IEnumerable{`0})">
+        <member name="M:Guestlist.UI.Console.Library.ConsoleGrid.Grid`1.DisplayGrid(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             Displays the data in the provided list in the console as a grid
             </summary>
             <param name="dataList">The list with data to display</param>
+        </member>
+        <member name="T:Guestlist.UI.Console.Library.ConsoleMenu.IMenuItem">
+            <summary>
+            Simple interface for defineing a menu item struct on console
+            </summary>
+        </member>
+        <member name="P:Guestlist.UI.Console.Library.ConsoleMenu.IMenuItem.Description">
+            <summary>
+            The description to the user about the menu item
+            </summary>
+        </member>
+        <member name="P:Guestlist.UI.Console.Library.ConsoleMenu.IMenuItem.Code">
+            <summary>
+            The selection code og the menu item
+            </summary>
+        </member>
+        <member name="P:Guestlist.UI.Console.Library.ConsoleMenu.IMenuItem.Order">
+            <summary>
+            The display order of the menu item, default is -1
+            </summary>
+        </member>
+        <member name="P:Guestlist.UI.Console.Library.ConsoleMenu.IMenuItem.ExecuteOnSelection">
+            <summary>
+            The action which should executed when the menu item is selected
+            </summary>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.ConsoleMenu.IMenuItem.Display(System.Int32)">
+            <summary>
+            Display the menu item on console.
+            </summary>
+            <param name="width">The width of the menu item</param>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.ConsoleMenu.Menu.SelectItem(System.String,System.ConsoleKey)">
+            <summary>
+            Returns the selected IMenuItem type. null if selection was canceled by cancel-key.
+            </summary>
+            <param name="userPrompt">The user prompt to display</param>
+            <param name="cancelKey">The key which cancels the selection process</param>
+            <returns></returns>
+        </member>
+        <member name="T:Guestlist.UI.Console.Library.ConsoleMenu.MenuItemSelectedArgs">
+            <summary>
+            Argument class with argument used for execution
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Guestlist.UI.Console.Library.ConsoleMenu.MenuItemSelectedArgs.Argument">
+            <summary>
+            An argument used for execution
+            </summary>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.ConsoleTools.DisplayColoredMessage(System.String,System.ConsoleColor,System.Boolean)">
+            <summary>
+            Generates colored messages for the console output
+            </summary>
+            <param name="message">The message to display</param>
+            <param name="messageColor">The color of the message</param>
+            <param name="restoreOldColor">Defines, wheather the old foreground-color should be restored or not.</param>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.ConsoleTools.DisplayColoredMessage(System.String)">
+            <summary>
+            Generates colored messages for the console output
+            </summary>
+            <param name="message">The message to display</param>
+            <param name="messageColor">The color of the message</param>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.ConsoleTools.DisplayColoredMessage(System.String,System.ConsoleColor)">
+            <summary>
+            
+            </summary>
+            <param name="message">The message to display</param>
+            <param name="messageColor">The color of the message</param>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.ConsoleTools.GetInt(System.String)">
+            <summary>
+            Reads an integer value from console input.
+            </summary>
+            <param name="inputPrompt">Prompt for the user</param>
+            <returns>Input value as integer</returns>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.ConsoleTools.GetDouble(System.String)">
+            <summary>
+            Reads an double value from console input.
+            </summary>
+            <param name="inputPrompt">Prompt for the user</param>
+            <returns></returns>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.ConsoleTools.GetDateTime(System.String,System.String)">
+            <summary>
+            Reads an DateTime value from console input. The input format must be [dd.MM.yyyy hh:mm:ss].
+            </summary>
+            <param name="inputPrompt">Prompt for the user</param>
+            <param name="dateTimeInputFormatString">Defines the input format of DateTime</param>
+            <returns></returns>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.ConsoleTools.GetDateTime(System.String)">
+            <summary>
+            Reads an DateTime value from console input. The input format must be [dd.MM.yyyy hh:mm:ss].
+            </summary>
+            <param name="inputPrompt">Prompt for the user</param>        
+            <returns></returns>
+        </member>
+        <member name="M:Guestlist.UI.Console.Library.ConsoleTools.GetString(System.String)">
+            <summary>
+            Reads an string value from console input.
+            </summary>
+            <param name="inputPrompt">Prompt for the user</param>
+            <returns></returns>
         </member>
     </members>
 </doc>

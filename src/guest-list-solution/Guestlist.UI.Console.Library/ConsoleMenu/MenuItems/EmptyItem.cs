@@ -19,7 +19,7 @@ namespace Guestlist.UI.Console.Library.ConsoleMenu.MenuItems
             set => value = value;
         }
 
-        public char Code => "";
+        public char Code => ' ';
 
         public int Order
         {
@@ -27,7 +27,7 @@ namespace Guestlist.UI.Console.Library.ConsoleMenu.MenuItems
             set => _order = value;
         }
 
-        public Action<MenuItemSelectedArgs> ExecuteOnSelection 
+        public Action ExecuteOnSelection 
         {
             get => null;
             set => value = value;

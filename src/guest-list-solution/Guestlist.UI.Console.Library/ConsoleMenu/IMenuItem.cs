@@ -7,7 +7,7 @@ namespace Guestlist.UI.Console.Library.ConsoleMenu
     /// <summary>
     /// Simple interface for defineing a menu item struct on console
     /// </summary>
-    public interface IMenuItem
+    public interface IMenuItem 
     {
         /// <summary>
         /// The description to the user about the menu item
@@ -27,7 +27,7 @@ namespace Guestlist.UI.Console.Library.ConsoleMenu
         /// <summary>
         /// The action which should executed when the menu item is selected
         /// </summary>
-        Action<MenuItemSelectedArgs> ExecuteOnSelection { get; set; }
+        Action ExecuteOnSelection { get; set; }
 
         /// <summary>
         /// Display the menu item on console.

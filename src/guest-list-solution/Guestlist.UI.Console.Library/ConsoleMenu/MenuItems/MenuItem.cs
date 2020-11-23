@@ -9,10 +9,10 @@ namespace Guestlist.UI.Console.Library.ConsoleMenu.MenuItems
         private string _description;
         private char _code;
         private int _order;
-        private Action<MenuItemSelectedArgs> _executeOnSelection;
+        private Action _executeOnSelection;
 
 
-        public MenuItem(string description, char code, Action<MenuItemSelectedArgs> executeOnSelection)
+        public MenuItem(string description, char code, Action executeOnSelection)
         {
             _order = -1;
 
@@ -34,7 +34,7 @@ namespace Guestlist.UI.Console.Library.ConsoleMenu.MenuItems
             get => _order;
             set => _order = value;
         }
-        public Action<MenuItemSelectedArgs> ExecuteOnSelection 
+        public Action ExecuteOnSelection 
         {
             get => _executeOnSelection;
             set => _executeOnSelection = value;
@@ -42,7 +42,7 @@ namespace Guestlist.UI.Console.Library.ConsoleMenu.MenuItems
 
         public virtual void Display(int width)
         {
-            System.Console.WriteLine("[{0}]{1}{2}", _code, new string('.', width - _description.Length), _description);
+            System.Console.WriteLine("[{0}]{1}{2}", _description, new string('.', width - _description.Length), _code);
         }    
     }
 }

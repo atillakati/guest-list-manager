@@ -8,7 +8,7 @@ namespace Guestlist.UI.Console.Library.ConsoleMenu.MenuItems
     {
         private ConsoleColor _itemColor;
 
-        public ColoredMenuItem(string description, char code, ConsoleColor itemColor, Action<MenuItemSelectedArgs> executeOnSelection)
+        public ColoredMenuItem(string description, char code, ConsoleColor itemColor, Action executeOnSelection)
             :base(description, code, executeOnSelection)
         {
             _itemColor = itemColor;
