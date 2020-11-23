@@ -28,12 +28,12 @@ For details see following link: https://www.thomas-krenn.com/de/wiki/Einfache_Sa
 ```
 docker pull portainer/portainer-ce
 ```
-Start the container with following settings:
+Start the portainer container with following settings:
 ```
 docker volume create portainer_data
 docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 ```
-
+After starting the service, you have a graphical UI for maintain docker. Goto url http://{ip address}:9000/.
 
 ## Start with the application
 To test and learn how to use the MongoDB with C# refer following git repository: https://github.com/histechup/guestlist-manager-cli-csharp
