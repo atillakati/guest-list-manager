@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Guestlist.UI.Console.Library
+namespace Guestlist.UI.Console.Library.ConsoleGrid
 {
     /// <summary>
     /// A GridView wrapper for easy handling
@@ -123,7 +123,7 @@ namespace Guestlist.UI.Console.Library
                 else
                 {
                     var layoutConfig = _columnLayout.GetValueOrDefault(property.Name);
-                    if(layoutConfig == null)
+                    if (layoutConfig == null)
                     {
                         layoutConfig = _defaultLayoutSetting;
                         layoutConfig.Alias = property.Name;

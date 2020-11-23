@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace Guestlist.UI.Console.Library
+namespace Guestlist.UI.Console.Library.ConsoleGrid
 {
     public class ColumnLayoutParser<T>
     {
@@ -45,7 +45,7 @@ namespace Guestlist.UI.Console.Library
         /// <param name="gridData">The data list to parse the settings for</param>
         /// <returns></returns>
         public Dictionary<string, ColumnLayoutConfig> ParseLayoutSettings(IEnumerable<T> gridData)
-        {            
+        {
             var typeInfo = typeof(T);
 
             //get available properties
@@ -88,7 +88,7 @@ namespace Guestlist.UI.Console.Library
             {
                 if (!maxColumnLength.ContainsKey(property.Name))
                 {
-                    maxColumnLength.Add(property.Name, property.Name.Length+2);
+                    maxColumnLength.Add(property.Name, property.Name.Length + 2);
                 }
 
                 var maxLengthOfValues = GetMaxLengthOfValues(property, gridData);
@@ -108,7 +108,7 @@ namespace Guestlist.UI.Console.Library
             foreach (var item in gridData)
             {
                 var value = property.GetValue(item);
-                lengthList.Add(value.ToString().Length+2);                      
+                lengthList.Add(value.ToString().Length + 2);
             }
 
             return lengthList.Max();

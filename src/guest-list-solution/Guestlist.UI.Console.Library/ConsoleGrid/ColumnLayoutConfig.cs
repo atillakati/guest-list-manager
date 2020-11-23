@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Guestlist.UI.Console.Library
+namespace Guestlist.UI.Console.Library.ConsoleGrid
 {
     public class ColumnLayoutConfig
     {
@@ -14,7 +14,7 @@ namespace Guestlist.UI.Console.Library
         /// <summary>
         /// The width of the column (count of chars)
         /// </summary>
-        public int Width { get; set; }        
+        public int Width { get; set; }
 
         /// <summary>
         /// Defines, wheather the column should be shown or not

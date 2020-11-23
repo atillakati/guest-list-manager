@@ -2,6 +2,7 @@
 using Guestlist.Data;
 using Guestlist.Data.Entities;
 using Guestlist.UI.Console.Library;
+using Guestlist.UI.Console.Library.ConsoleGrid;
 using System;
 using System.Collections.Generic;
 
