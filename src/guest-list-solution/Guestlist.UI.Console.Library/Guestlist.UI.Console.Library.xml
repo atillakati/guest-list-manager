@@ -55,6 +55,11 @@
             </summary>
             <param name="columnLayout">Defines the grid column layout, default column layout is invisible</param>
         </member>
+        <member name="P:Guestlist.UI.Console.Library.ConsoleGrid.Grid`1.DefaultLayoutSetting">
+            <summary>
+            Spezifies a default column setting for missing columnlayoutconfigs
+            </summary>
+        </member>
         <member name="M:Guestlist.UI.Console.Library.ConsoleGrid.Grid`1.DisplayGrid(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             Displays the data in the provided list in the console as a grid
